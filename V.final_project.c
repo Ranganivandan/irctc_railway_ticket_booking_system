@@ -84,6 +84,7 @@ int main()
             break;
         case 4:
             cancelticket();
+            printf("currently we are not giving  facility for cancelling booked ticket \n");
             break;
         case 5:
             printf("you logout succesfully\n");
@@ -99,11 +100,33 @@ int main()
 // function account;
 void createaccount()
 {
-
+int flag=0;
     printf("enter username\n");
     scanf("%s", username);
+    reenter:
     printf("enter E-mail \n");
     scanf("%s", mail);
+    
+  // character extraction
+   
+    for (int i = 0; mail[i] != '\0'; i++) {
+        if (mail[i] == '@') { 
+            flag=1;
+            
+        }
+        else{
+            
+            
+        }
+    }
+    if(flag==1)printf("valid email  \n");
+    else{
+        
+         printf("invalid Email\n");
+    goto reenter;   // goto reneter email
+
+    }
+
     printf("enter password\n");
     scanf("%s", pass);
     printf("enter age\n");
@@ -112,7 +135,7 @@ void createaccount()
     system("cls");
     FILE *file = fopen("accountuserinfo.txt", "a");
 
-    fprintf(file, "%s\t %s\t %d\n", username, pass, age);
+    fprintf(file, "%s\t %s\t  %s %d\n", username, pass,mail, age);
     fclose(file);
     return;
 }
