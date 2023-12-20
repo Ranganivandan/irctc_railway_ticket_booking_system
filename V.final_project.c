@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
+#include <unistd.h>
 // int flag = 0; /// flag
 char username[50];
 char mail[50];
@@ -740,11 +741,20 @@ int ticketdetail()
 int  cancelticket(){
 
 
- FILE *cancel = fopen("ticket.txt", "w");
 
+
+
+    const char *filename = "ticket.txt";
+
+    // Check if the file exists
+    if (access(filename, F_OK) != -1) {
+        printf("File '%s' exists.\n", filename);
+
+ FILE *cancel=fopen("ticket.txt","w");
     // Check if the file is opened successfully
     if (cancel == NULL) {
-        fprintf(stderr, "Error opening the file.\n");
+        // fprintf(stderr, "Error opening the file.\n");
+        printf("error in opening the file\n");
         return 1;
     }
 
@@ -756,4 +766,16 @@ int  cancelticket(){
    return 0;
 
 
-};
+    } else {
+        printf("File '%s' does not exist.\n", filename);
+    }
+
+    return 0;
+
+
+
+
+
+
+
+}
