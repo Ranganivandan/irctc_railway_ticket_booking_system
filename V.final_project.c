@@ -35,7 +35,7 @@ int age;
 void createaccount();
 void login();
 void bookticket();
-void cancelticket();
+int  cancelticket();
 int ticketdetail();
 
 int main()
@@ -84,7 +84,7 @@ int main()
             break;
         case 4:
             cancelticket();
-            printf("currently we are not giving  facility for cancelling booked ticket \n");
+            
             break;
         case 5:
             printf("you logout succesfully\n");
@@ -196,7 +196,7 @@ void bookticket()
     printf("enter destination station\n");
     scanf("%s", destini);
     /////////
-
+system("cls");
     printf("available trains");
     printf("\n:::: TRAINS:::::::TRAIN NUMBER::::::::PRICE:::::::\n");
     printf("1. INTERSITY EXP   22960   Rs.200\n");
@@ -256,7 +256,7 @@ int ticketdetail()
         ///////
 
         printf("total cost is %d/-", numberoftickets * 200);
-        printf("enter password and pay %d", numberoftickets * 200);
+        printf("enter password and pay %d\n", numberoftickets * 200);
         scanf("%s", passlogin);
         printf("enter username");
         scanf("%s", userlogin);
@@ -439,7 +439,7 @@ int ticketdetail()
         printf("1.AC(2A)\n 2.AC(3A)\n 3.SLEEPER\n 4.SITTING(2S)\n");
         scanf("%d", &entercalss);
         printf("total cost is %d/-", numberoftickets * 800);
-        printf("enter password and pay %d", numberoftickets * 800);
+        printf("enter password and pay %d\n", numberoftickets * 800);
         scanf("%s", passlogin);
         printf("enter username");
         scanf("%s", userlogin);
@@ -500,9 +500,9 @@ int ticketdetail()
         fprintf(fffile2, "::::::transaction details::::::\n");
         fprintf(fffile2, "transaction ID is: %d\n", rand());
         fprintf(fffile2, "price of %d is %d\n", numberoftickets, numberoftickets * 200);
-        fprintf(fffile2, "cgst:%f\n", (float)numberoftickets * 200 * 0.18);
-        fprintf(fffile2, "sgst: %f\n", (float)numberoftickets * 200 * 0.18);
-        fprintf(fffile2, "total:%f\n", (float)(numberoftickets * 200 * 0.18 * 2) + (numberoftickets * 200));
+        fprintf(fffile2, "cgst:%f\n", (float)numberoftickets * 800 * 0.18);
+        fprintf(fffile2, "sgst: %f\n", (float)numberoftickets * 800 * 0.18);
+        fprintf(fffile2, "total:%f\n", (float)(numberoftickets * 800 * 0.18 * 2) + (numberoftickets * 200));
         fprintf(fffile2, "::::::::::THANK YOU ::::::::::");
         fclose(fffile2);
 
@@ -516,7 +516,7 @@ int ticketdetail()
         printf("1.AC(2A)\n 2.AC(3A)\n 3.SLEEPER\n 4.SITTING(2S)\n");
         scanf("%d", &entercalss);
         printf("total cost is %d/-", numberoftickets * 300);
-        printf("enter password and pay %d", numberoftickets * 300);
+        printf("enter password and pay %d\n", numberoftickets * 300);
         scanf("%s", passlogin);
         printf("enter username");
         scanf("%s", userlogin);
@@ -577,9 +577,9 @@ int ticketdetail()
         fprintf(fffile4, "::::::transaction details::::::\n");
         fprintf(fffile4, "transaction ID is: %d\n", rand());
         fprintf(fffile4, "price of %d is %d\n", numberoftickets, numberoftickets * 200);
-        fprintf(fffile4, "cgst:%f\n", (float)numberoftickets * 200 * 0.18);
-        fprintf(fffile4, "sgst: %f\n", (float)numberoftickets * 200 * 0.18);
-        fprintf(fffile4, "total:%f\n", (float)(numberoftickets * 200 * 0.18 * 2) + (numberoftickets * 200));
+        fprintf(fffile4, "cgst:%f\n", (float)numberoftickets * 300 * 0.18);
+        fprintf(fffile4, "sgst: %f\n", (float)numberoftickets * 300 * 0.18);
+        fprintf(fffile4, "total:%f\n", (float)(numberoftickets * 300 * 0.18 * 2) + (numberoftickets * 200));
         fprintf(fffile4, "::::::::::THANK YOU ::::::::::");
         fclose(fffile4);
         break;
@@ -592,7 +592,7 @@ int ticketdetail()
         printf("1.AC(2A)\n 2.AC(3A)\n 3.SLEEPER\n 4.SITTING(2S)\n");
         scanf("%d", &entercalss);
         printf("total cost is %d/-", numberoftickets * 400);
-        printf("enter password and pay %d", numberoftickets * 400);
+        printf("enter password and pay %d\n", numberoftickets * 400);
         scanf("%s", passlogin);
         printf("enter username");
         scanf("%s", userlogin);
@@ -653,9 +653,9 @@ int ticketdetail()
         fprintf(fffile5, "::::::transaction details::::::\n");
         fprintf(fffile5, "transaction ID is: %d\n", rand());
         fprintf(fffile5, "price of %d is %d\n", numberoftickets, numberoftickets * 200);
-        fprintf(fffile5, "cgst:%f\n", (float)numberoftickets * 200 * 0.18);
-        fprintf(fffile5, "sgst: %f\n", (float)numberoftickets * 200 * 0.18);
-        fprintf(fffile5, "total:%f\n", (float)(numberoftickets * 200 * 0.18 * 2) + (numberoftickets * 200));
+        fprintf(fffile5, "cgst:%f\n", (float)numberoftickets * 400 * 0.18);
+        fprintf(fffile5, "sgst: %f\n", (float)numberoftickets * 400 * 0.18);
+        fprintf(fffile5, "total:%f\n", (float)(numberoftickets * 400 * 0.18 * 2) + (numberoftickets * 200));
         fprintf(fffile5, "::::::::::THANK YOU ::::::::::");
         fclose(fffile5);
 
@@ -669,7 +669,7 @@ int ticketdetail()
         printf("1.AC(2A)\n 2.AC(3A)\n 3.SLEEPER\n 4.SITTING(2S)\n");
         scanf("%d", &entercalss);
         printf("total cost is %d/-", numberoftickets * 500);
-        printf("enter password and pay %d", numberoftickets * 500);
+        printf("enter password and pay %d\n", numberoftickets * 500);
         scanf("%s", passlogin);
         printf("enter username");
         scanf("%s", userlogin);
@@ -729,14 +729,31 @@ int ticketdetail()
         fprintf(fffile6, "::::::transaction details::::::\n");
         fprintf(fffile6, "transaction ID is: %d\n", rand());
         fprintf(fffile6, "price of %d is %d\n", numberoftickets, numberoftickets * 200);
-        fprintf(fffile6, "cgst:%f\n", (float)numberoftickets * 200 * 0.18);
-        fprintf(fffile6, "sgst: %f\n", (float)numberoftickets * 200 * 0.18);
-        fprintf(fffile6, "total:%f\n", (float)(numberoftickets * 200 * 0.18 * 2) + (numberoftickets * 200));
+        fprintf(fffile6, "cgst:%f\n", (float)numberoftickets * 500 * 0.18);
+        fprintf(fffile6, "sgst: %f\n", (float)numberoftickets * 500 * 0.18);
+        fprintf(fffile6, "total:%f\n", (float)(numberoftickets * 500 * 0.18 * 2) + (numberoftickets * 200));
         fprintf(fffile6, "::::::::::THANK YOU ::::::::::");
         fclose(fffile6);
         break;
     }
 }
-void cancelticket(){
+int  cancelticket(){
+
+
+ FILE *cancel = fopen("ticket.txt", "w");
+
+    // Check if the file is opened successfully
+    if (cancel == NULL) {
+        fprintf(stderr, "Error opening the file.\n");
+        return 1;
+    }
+
+    // Close the file
+    fclose(cancel);
+
+    printf("ticket cancelled succesfully.\n");
+
+   return 0;
+
 
 };
